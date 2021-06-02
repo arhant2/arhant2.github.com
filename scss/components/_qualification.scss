@@ -1,0 +1,131 @@
+.qualification {
+  width: 90%;
+  max-width: 100rem;
+  margin: 10rem auto 0;
+
+  &__main {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+
+    @media only screen and (max-width: (880em/16)) {
+      flex-direction: column;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    max-width: 45rem;
+    padding-left: 5rem;
+    position: relative;
+
+    @media only screen and (max-width: (880em/16)) {
+      max-width: 90%;
+      margin: 0 auto;
+    }
+  }
+
+  &__list::before {
+    content: '';
+    display: block;
+    height: calc(100% - 3rem);
+    border-left: 2px dashed var(--color-primary);
+    position: absolute;
+    left: 1rem;
+    top: 5px;
+    transform: translateX(-50%);
+  }
+
+  &__item-institution {
+    color: var(--color-primary);
+    font-weight: 600;
+    position: relative;
+  }
+
+  &__item-institution::before {
+    content: '';
+    display: block;
+    padding: 1px;
+    z-index: 1;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    border: 0.6rem solid var(--color-primary);
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    transition: all 0.2s;
+    cursor: pointer;
+
+    position: absolute;
+    left: -5rem;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+
+  &__item-degree {
+    font-weight: 600;
+    font-size: 2rem;
+    font-family: var(--font-family-secondary);
+  }
+
+  &__item-description {
+    font-size: 1.3rem;
+    color: var(--color-grey-1);
+    margin: 0.5rem 0 2rem;
+  }
+
+  &__img-outer {
+    flex: 0 0 40rem;
+    position: relative;
+
+    @media only screen and (max-width: (880em/16)) {
+      flex: auto;
+      height: 25rem;
+      width: 48rem;
+      margin: auto;
+      margin-top: 3rem;
+    }
+
+    @media only screen and (max-width: (500em/16)) {
+      width: 90%;
+    }
+  }
+
+  &__img {
+    width: 30rem;
+    position: absolute;
+    border-radius: 3rem;
+
+    @media only screen and (max-width: (680em/16)) {
+      width: 25rem;
+    }
+
+    @media only screen and (max-width: (500em/16)) {
+      width: 60%;
+    }
+  }
+
+  &__img--1 {
+    top: 0;
+    left: 0;
+  }
+
+  &__img--2 {
+    top: 10rem;
+    left: 10rem;
+
+    @media only screen and (max-width: (880em/16)) {
+      top: 4rem;
+      left: 20rem;
+    }
+
+    @media only screen and (max-width: (680em/16)) {
+      top: 2rem;
+    }
+
+    @media only screen and (max-width: (500em/16)) {
+      top: 1rem;
+      left: 40%;
+    }
+  }
+}

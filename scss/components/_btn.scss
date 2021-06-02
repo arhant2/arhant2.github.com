@@ -1,0 +1,52 @@
+.btn {
+  background-image: var(--gradient);
+
+  color: #fff;
+  text-decoration: none;
+
+  padding: 1rem 2.75rem;
+  border-radius: 10rem;
+  font-size: 1.55rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
+  box-shadow: 0rem 1.5rem 2rem #f76b1c55;
+  transition: all 0.1s;
+  display: inline-block;
+
+  @media only screen and (max-width: (880em/16)) {
+    padding: 0.8rem 2rem;
+  }
+
+  @media only screen and (max-width: (680em/16)) {
+    padding: 0.7rem 1.5rem;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &--secondary {
+    background: var(--color-font);
+    box-shadow: none;
+
+    &:after {
+      content: '\0020\0020\2192';
+      // width: 0;
+      display: inline-block;
+      overflow: hidden;
+      height: 1.8rem;
+      width: 0;
+      transition: all 0.2s;
+    }
+
+    &:hover {
+      transform: translateY(0);
+    }
+
+    &:hover:after {
+      padding-left: 0.4rem;
+      width: 2rem;
+    }
+  }
+}

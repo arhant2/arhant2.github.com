@@ -1,0 +1,17 @@
+@import './abstracts/functions';
+@import './abstracts/mixins';
+@import './abstracts/variables';
+
+@import './base/base';
+@import './base/typography';
+@import './base/utilities';
+
+@import './components/body';
+@import './components/btn';
+@import './components/connect';
+@import './components/footer';
+@import './components/intro';
+@import './components/nav';
+@import './components/projects';
+@import './components/qualification';
+@import './components/skills';
